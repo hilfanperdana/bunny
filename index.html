@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffe0ec" />
+  <meta name="description" content="Sebuah kejutan ulang tahun kecil, dibuat khusus untukmu." />
+  <title>Bunny Birthday Surprise 🎀</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="style.css?v=20261106b" />
+  <script src="config.js?v=20261106b" defer></script>
+  <script src="script.js?v=20261106c" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="floating-dots" aria-hidden="true">
+    <span>✿</span><span>✦</span><span>♡</span><span>✧</span><span>✿</span><span>♡</span>
+  </div>
+
+  <main class="app" id="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-bow" aria-hidden="true">🎀</span><span>little bunny mail</span></div>
+      <button class="sound-button" id="soundToggle" type="button" aria-pressed="false" aria-label="Aktifkan efek suara">
+        <span id="soundIcon" aria-hidden="true">♪</span> <span id="soundLabel">suara mati</span>
+      </button>
+    </header>
+
+    <nav class="progress-dots" aria-label="Progres kejutan">
+      <span class="progress-dot active" aria-current="step"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+    </nav>
+
+    <section class="stage active" id="stage-welcome" aria-labelledby="welcomeHeading">
+      <div class="kicker"><span aria-hidden="true">✧</span> special delivery <span aria-hidden="true">✧</span></div>
+      <div class="bunny-scene">
+        <span class="scene-star star-one" aria-hidden="true">✦</span>
+        <span class="scene-star star-two" aria-hidden="true">✧</span>
+        <span class="scene-heart" aria-hidden="true">♥</span>
+        <div class="bunny-glow"></div>
+        <button type="button" class="pet-bunny" id="petBunny" aria-label="Elus kelinci untuk mendengar reaksinya"><img class="bunny-art" src="assets/bunny.svg" width="240" height="250" alt="Kelinci putih kecil dengan pita pink membawa surat" /><span class="pet-sparkle" aria-hidden="true">♥</span></button>
+      </div>
+      <div class="speech-bubble" id="bunnySpeech" role="status">Psst... aku bawa paket buat kamu! ♡</div><p class="pet-tip">psst... coba elus kelincinya! ✨</p>
+      <h1 id="welcomeHeading">Hai, <span id="recipientName">kamu</span>! <span aria-hidden="true">🌷</span></h1>
+      <p class="supporting-text">Ada kejutan mungil yang dititipkan padaku. Tapi sebelum dibuka... mau main sebentar?</p>
+      <button class="primary-button" id="startBtn" type="button">Buka petualangannya <span aria-hidden="true">→</span></button>
+      <div class="tiny-caption">made with a little bit of magic & lots of pink ♡</div>
+    </section>
+
+    <section class="stage" id="stage-carrots" aria-labelledby="carrotHeading" hidden>
+      <div class="kicker">mini mission · 01</div>
+      <div class="mini-bunny-row"><img src="assets/bunny.svg" width="104" height="104" alt="Bunny menyemangati"/><div class="mini-speech">Oh tidak! Wortelku bersembunyi~</div></div>
+      <h2 id="carrotHeading">Cari 3 wortel! <span aria-hidden="true">🥕</span></h2>
+      <p class="supporting-text">Ketuk semua wortel yang ada di taman pink ini untuk membantu Bunny.</p>
+      <div class="carrot-garden" role="group" aria-label="Permainan mencari tiga wortel">
+        <span class="garden-flower flower-left" aria-hidden="true">✿</span>
+        <span class="garden-flower flower-right" aria-hidden="true">✿</span>
+        <span class="garden-star" aria-hidden="true">✦</span>
+        <button type="button" class="carrot carrot-one" data-carrot="1" aria-label="Ambil wortel pertama"><span aria-hidden="true">🥕</span></button>
+        <button type="button" class="carrot carrot-two" data-carrot="2" aria-label="Ambil wortel kedua"><span aria-hidden="true">🥕</span></button>
+        <button type="button" class="carrot carrot-three" data-carrot="3" aria-label="Ambil wortel ketiga"><span aria-hidden="true">🥕</span></button>
+        <div class="garden-hill hill-back" aria-hidden="true"></div>
+        <div class="garden-hill hill-front" aria-hidden="true"></div>
+      </div>
+      <div class="score-pill" id="carrotScore" role="status">🥕 0 / 3 ditemukan</div>
+      <div class="tiny-caption" id="carrotHint">Psst... mereka suka bersembunyi di taman.</div>
+    </section>
+
+    <section class="stage" id="stage-lucky" aria-labelledby="luckyHeading" hidden>
+      <div class="kicker">mini mission · 02</div>
+      <div class="lucky-header-art" aria-hidden="true">✧ 🐰 ✧</div>
+      <h2 id="luckyHeading">Pilih satu surat keberuntungan! 💌</h2>
+      <p class="supporting-text">Bunny membawa tiga amplop rahasia. Pilih satu yang paling menarik buat kamu!</p>
+      <div class="envelope-grid" role="group" aria-label="Pilih salah satu dari tiga amplop keberuntungan">
+        <button class="lucky-envelope" type="button" data-charm="0" aria-label="Buka amplop bintang">
+          <span class="envelope-icon" aria-hidden="true">⭐</span><span class="envelope-shape" aria-hidden="true"><i></i></span><span class="envelope-label">Star</span>
+        </button>
+        <button class="lucky-envelope" type="button" data-charm="1" aria-label="Buka amplop bunga">
+          <span class="envelope-icon" aria-hidden="true">🌷</span><span class="envelope-shape" aria-hidden="true"><i></i></span><span class="envelope-label">Bloom</span>
+        </button>
+        <button class="lucky-envelope" type="button" data-charm="2" aria-label="Buka amplop awan">
+          <span class="envelope-icon" aria-hidden="true">☁️</span><span class="envelope-shape" aria-hidden="true"><i></i></span><span class="envelope-label">Cloud</span>
+        </button>
+      </div>
+      <div class="lucky-reveal" id="luckyReveal" role="status" hidden>
+        <span class="lucky-stamp" id="luckyEmoji" aria-hidden="true">⭐</span>
+        <h3 id="luckyTitle">Bintang Ceria</h3>
+        <p id="luckyMessage"></p>
+        <button class="primary-button" id="nextCakeBtn" type="button">Lanjut ke kue 🎂</button>
+      </div>
+      <div class="tiny-caption" id="luckyHint">Tenang, nggak ada jawaban salah di sini. ♡</div>
+    </section>
+
+    <section class="stage" id="stage-cake" aria-labelledby="cakeHeading" hidden>
+      <div class="kicker">mini mission · 03</div>
+      <div class="tiny-starline" aria-hidden="true">✧ ♡ ✧</div>
+      <h2 id="cakeHeading">Saatnya bikin permohonan!</h2>
+      <p class="supporting-text">Tutup mata sebentar, pikirkan sesuatu yang baik, lalu ketuk ketiga lilin di kue. 🎂</p>
+      <div class="cake-scene">
+        <span class="cake-sparkle sparkle-left" aria-hidden="true">✦</span>
+        <span class="cake-sparkle sparkle-right" aria-hidden="true">✧</span>
+        <div class="cake-wrap">
+          <div class="candles" role="group" aria-label="Tiga lilin ulang tahun">
+            <button class="candle" type="button" data-candle="1" aria-label="Padamkan lilin pertama"><span class="flame"></span><span class="wick"></span></button>
+            <button class="candle" type="button" data-candle="2" aria-label="Padamkan lilin kedua"><span class="flame"></span><span class="wick"></span></button>
+            <button class="candle" type="button" data-candle="3" aria-label="Padamkan lilin ketiga"><span class="flame"></span><span class="wick"></span></button>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-layer"><div class="icing"></div><div class="cake-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="cake-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+      </div>
+      <div class="score-pill" id="candleScore" role="status">🕯️ 0 / 3 lilin padam</div>
+      <div class="tiny-caption" id="candleHint">Wish, wish, wish... ✨</div>
+    </section>
+
+    <section class="stage" id="stage-gift" aria-labelledby="giftHeading" hidden>
+      <div class="kicker">a little present · 04</div>
+      <div class="tiny-starline" aria-hidden="true">✦ ♡ ✦</div>
+      <h2 id="giftHeading">Yeay! Misinya selesai!</h2>
+      <p class="supporting-text">Bunny sudah menyiapkan satu paket terakhir. Yang ini khusus buat kamu.</p>
+      <div class="gift-scene">
+        <span class="gift-float float-one" aria-hidden="true">♡</span><span class="gift-float float-two" aria-hidden="true">✿</span>
+        <button type="button" class="gift-button" id="giftBtn" aria-label="Buka kotak hadiah pink">
+          <span class="gift-bow bow-left"></span><span class="gift-bow bow-right"></span><span class="gift-bow-center"></span>
+          <span class="gift-lid"></span><span class="gift-box"></span><span class="gift-ribbon"></span>
+        </button>
+      </div>
+      <p class="gift-instruction">↑ ketuk kotak hadiahnya ↑</p>
+      <div class="tiny-caption">Ada sesuatu yang ingin Bunny sampaikan...</div>
+    </section>
+
+    <section class="stage" id="stage-finale" aria-labelledby="finaleHeading" hidden>
+      <div class="kicker">from bunny, with smiles ♡</div>
+      <div class="finale-header"><span aria-hidden="true">✦</span><img src="assets/bunny.svg" width="145" height="145" alt="Bunny mengantarkan kartu ucapan ulang tahun"/><span aria-hidden="true">✦</span></div>
+      <article class="letter-card">
+        <div class="letter-top" aria-hidden="true">🎀 &nbsp; ✿ &nbsp; 🎀</div>
+        <h2 id="finaleHeading">Happy Birthday!</h2>
+        <p class="letter-to" id="letterTo">untuk kamu yang spesial ✨</p>
+        <p class="letter-message" id="letterMessage">Semoga hari ini penuh hal-hal kecil yang bikin kamu tersenyum.</p>
+        <p class="letter-signature" id="letterSignature">— dari seseorang 🌷</p>
+      </article>
+      <aside class="lucky-keepsake" id="luckyKeepsake" hidden>
+        <div class="keepsake-title">✧ Your lucky note ✧</div>
+        <strong id="finalLuckyTitle"></strong>
+        <p id="finalLuckyMessage"></p>
+      </aside>
+      <section class="tiny-wishes" aria-labelledby="tinyWishesHeading">
+        <h3 id="tinyWishesHeading">3 little notes from Bunny 🎀</h3>
+        <p class="tiny-wishes-intro">Ketuk tiap kartu buat membaca pesannya!</p>
+        <div class="wish-flips" role="group" aria-label="Tiga kartu pesan mini">
+          <button class="wish-flip" type="button" data-wish="0" aria-expanded="false"><span class="wish-cover">✦<small>note 01</small></span><span class="wish-content"></span></button>
+          <button class="wish-flip" type="button" data-wish="1" aria-expanded="false"><span class="wish-cover">♡<small>note 02</small></span><span class="wish-content"></span></button>
+          <button class="wish-flip" type="button" data-wish="2" aria-expanded="false"><span class="wish-cover">✿<small>note 03</small></span><span class="wish-content"></span></button>
+        </div>
+      </section>
+      <section class="memory-section" id="memorySection" aria-labelledby="memoryHeading" hidden>
+        <h3 id="memoryHeading">Little snapshots 📷</h3>
+        <p class="tiny-wishes-intro">Momen-momen kecil yang disimpan Bunny.</p>
+        <div class="memory-gallery" id="memoryGallery"></div>
+      </section>
+      <section class="delivery-section" id="deliverySection" aria-labelledby="deliveryHeading">
+        <div class="delivery-topper" aria-hidden="true">🌷 · 📮 · 🌷</div>
+        <img class="delivery-bunny" src="assets/bunny.svg" width="105" height="110" alt="Bunny si kurir kecil" loading="lazy" />
+        <div class="delivery-kicker">Bunny's Secret Delivery · bonus</div>
+        <h3 id="deliveryHeading">Psst... mau kejutan kecil berikutnya? 🎀</h3>
+        <p class="delivery-intro" id="deliveryDescription">Bunny punya kejutan kecil yang bisa diantar kalau kamu mau. Isinya rahasia!</p>
+        <div id="deliveryChoice" class="delivery-choice">
+          <button class="primary-button" id="acceptDeliveryBtn" type="button">Mauu, penasaran! 🎁</button>
+          <button class="secondary-button" id="declineDeliveryBtn" type="button">Hadiah digitalnya cukup 🩷</button>
+        </div>
+
+        <div class="delivery-form-wrap" id="deliveryFormWrap" hidden>
+          <div class="form-topline">✧ Bunny perlu alamat pengantaran ✧</div>
+          <p class="form-caption">Kamu bebas memilih rumah, kos, tempat kerja, atau titik temu. <strong>Tidak harus alamat rumah.</strong></p>
+          <form id="deliveryForm" novalidate>
+            <label for="deliveryName">Nama penerima <span class="required">*</span></label>
+            <input id="deliveryName" name="Nama penerima" type="text" autocomplete="name" minlength="2" maxlength="80" required placeholder="Nama yang akan menerima paket" />
+
+            <label for="deliveryAddress">Alamat / titik pengantaran <span class="required">*</span></label>
+            <textarea id="deliveryAddress" name="Alamat atau titik pengantaran" autocomplete="street-address" rows="3" minlength="10" maxlength="600" required placeholder="Misalnya: lokasi yang nyaman di Gebang, Jember, beserta patokan yang jelas"></textarea>
+
+            <label for="deliveryPhone">Nomor WhatsApp untuk kurir <span class="optional">opsional</span></label>
+            <input id="deliveryPhone" name="WhatsApp penerima (opsional)" type="tel" autocomplete="tel" inputmode="tel" maxlength="24" placeholder="Boleh dikosongkan" />
+
+            <label for="deliveryNotes">Catatan pengantaran <span class="optional">opsional</span></label>
+            <textarea id="deliveryNotes" name="Catatan tambahan (opsional)" rows="2" maxlength="300" placeholder="Misalnya: bisa menerima paket sore hari"></textarea>
+
+            <label class="delivery-consent" for="deliveryConsent">
+              <input id="deliveryConsent" type="checkbox" required />
+              <span>Aku setuju data yang kuisi dikirim ke <strong id="deliveryRecipientLabel">email pengirim hadiah</strong> melalui layanan FormSubmit, hanya untuk mengatur pengantaran kejutan ini.</span>
+            </label>
+            <p class="delivery-privacy">Alamat tidak diambil otomatis dari GPS. Kamu sendiri yang memilih apa yang ingin dibagikan. Data diproses oleh <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">FormSubmit</a> sebelum dikirim ke pengirim hadiah.</p>
+            <p id="deliveryError" class="delivery-error" role="alert" hidden></p>
+            <button class="primary-button" id="sendDeliveryBtn" type="submit">Kirim ke Bunny Courier 💌</button>
+            <button class="text-button" id="cancelDeliveryBtn" type="button">Nggak jadi, kembali dulu</button>
+          </form>
+        </div>
+
+        <div id="deliveryDeclined" class="delivery-response" role="status" hidden>
+          <span class="delivery-response-emoji" aria-hidden="true">🐰💗</span>
+          <h4>Okeee, nggak apa-apa!</h4>
+          <p>Yang penting hadiah kecil hari ini sudah sampai. Semoga kamu tersenyum, ya~ 🌸</p>
+          <button class="text-button" id="reconsiderDeliveryBtn" type="button">Eh, aku berubah pikiran 🎀</button>
+        </div>
+
+        <div id="deliverySuccess" class="delivery-response" role="status" hidden>
+          <span class="delivery-response-emoji" aria-hidden="true">📮🐰</span>
+          <h4>Yeay, pesannya sudah dikirim!</h4>
+          <p>Alamat pilihanmu sudah diteruskan ke layanan pengiriman email. Bunny akan berusaha menyiapkan kejutan berikutnya! 🎁</p>
+          <small>Hadiah fisik belum otomatis dipesan. Pengirim akan mengatur pengantarannya secara terpisah.</small>
+        </div>
+
+        <div id="deliveryUnconfigured" class="delivery-response" role="status" hidden>
+          <span class="delivery-response-emoji" aria-hidden="true">🐰⏳</span>
+          <h4>Bunny masih menyiapkan kotak suratnya</h4>
+          <p>Fitur pengiriman belum tersedia. Tenang, hadiah digitalmu tetap bisa dinikmati! 🎀</p>
+        </div>
+      </section>
+      <div class="finale-actions">
+        <button class="primary-button" id="secretBtn" type="button">Ada pesan kecil lagi <span aria-hidden="true">✉</span></button>
+        <button class="text-button" id="replayBtn" type="button">↻ Main lagi dari awal</button>
+      </div>
+      <div class="tiny-caption">thank you for visiting my little pink world ♡</div>
+    </section>
+
+    <footer class="app-footer">a tiny corner of happiness <span aria-hidden="true">✿</span></footer>
+  </main>
+
+  <dialog class="secret-dialog" id="secretDialog" aria-labelledby="secretHeading">
+    <div class="dialog-decoration" aria-hidden="true">✦ 🌸 ✦</div>
+    <h2 id="secretHeading">Satu pesan rahasia... <span aria-hidden="true">🐰</span></h2>
+    <p id="secretMessage">Semoga banyak alasan kecil untuk bahagia hari ini.</p>
+    <button class="primary-button" id="closeSecretBtn" type="button">Simpan senyumnya ♡</button>
+  </dialog>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+</body>
+</html>
