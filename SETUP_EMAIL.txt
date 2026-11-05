@@ -1,0 +1,19 @@
+🎀 BUNNY'S SECRET DELIVERY — 3 LANGKAH WAJIB
+
+1) Buka config.js:
+   deliveryEmail: "ipangsilenk@gmail.com",
+   -> sudah diisi. Ganti hanya jika ingin menggunakan email lain.
+
+2) Upload website ke GitHub Pages, buka link ONLINE-nya.
+   Isi form TES dengan data palsu, kirim, buka emailmu dan
+   KLIK KONFIRMASI / AKTIVASI FormSubmit.co.
+
+3) KIRIM FORM TES LAGI setelah aktivasi. Pastikan email masuk!
+   BARU bagikan QR pada penerima.
+
+Tidak ada pengiriman otomatis jika email belum diisi.
+Penerima boleh memilih tidak mengisi form; tidak ada GPS/track tersembunyi.
+Alamat, jika diberikan, hanya untuk mengatur pengantaran yang dipilih penerima.
+
+CATATAN: emailmu terlihat di kode website publik.
+README.md menjelaskan hal ini dan alternatif token FormSubmit.

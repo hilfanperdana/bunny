@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 310" role="img" aria-labelledby="title desc">
+<title id="title">Kelinci Bunny lucu</title>
+<desc id="desc">Kelinci putih berpita pink memegang amplop bergambar hati.</desc>
+<defs>
+  <linearGradient id="fur" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff0f6"/></linearGradient>
+  <linearGradient id="inner" x1="0" y1="0" x2="0.8" y2="1"><stop stop-color="#ffb8d4"/><stop offset="1" stop-color="#ffd8e9"/></linearGradient>
+  <filter id="shadow" x="-40%" width="180%" y="-40%" height="180%"><feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#e4a6be" flood-opacity=".26"/></filter>
+</defs>
+<ellipse cx="151" cy="285" rx="96" ry="12" fill="#ebbbce" opacity=".32"/>
+<g stroke="#cf9caf" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" filter="url(#shadow)">
+  <!-- fluffy ears -->
+  <path d="M97 121 C79 76 62 23 82 14 C111 -4 128 62 133 100 Z" fill="url(#fur)"/>
+  <path d="M167 99 C178 49 207 5 225 16 C246 31 214 86 202 129 Z" fill="url(#fur)"/>
+  <path d="M98 98 C86 62 78 27 88 25 C105 24 119 72 120 96 Z" fill="url(#inner)" stroke="none"/>
+  <path d="M184 94 C194 50 213 23 223 28 C230 38 210 76 199 104 Z" fill="url(#inner)" stroke="none"/>
+  <!-- body -->
+  <path d="M102 218 C93 232 95 266 103 281 C123 298 185 296 200 280 C210 262 210 231 197 214 Z" fill="url(#fur)"/>
+  <ellipse cx="118" cy="274" rx="31" ry="17" fill="#fff8fb"/>
+  <ellipse cx="187" cy="274" rx="31" ry="17" fill="#fff8fb"/>
+  <!-- head -->
+  <path d="M62 146 C61 95 99 77 148 77 C194 75 237 100 238 154 C239 197 202 227 154 229 C105 229 62 198 62 146 Z" fill="url(#fur)"/>
+  <!-- cheeks -->
+  <ellipse cx="100" cy="175" rx="19" ry="10" fill="#ffc1d5" opacity=".83" stroke="none"/>
+  <ellipse cx="208" cy="175" rx="19" ry="10" fill="#ffc1d5" opacity=".83" stroke="none"/>
+  <!-- eyes -->
+  <ellipse cx="117" cy="156" rx="7.2" ry="10.8" fill="#583843" stroke="none"/>
+  <ellipse cx="187" cy="156" rx="7.2" ry="10.8" fill="#583843" stroke="none"/>
+  <circle cx="119.7" cy="152.2" r="2.2" fill="#fff" stroke="none"/>
+  <circle cx="189.6" cy="152.2" r="2.2" fill="#fff" stroke="none"/>
+  <!-- nose + mouth -->
+  <path d="M147 172 Q153 166 159 172 Q155 178 153 178 Q150 177 147 172 Z" fill="#e88fae" stroke="none"/>
+  <path d="M153 178 V184 M153 184 Q146 192 140 183 M153 184 Q160 192 166 183" fill="none" stroke="#a27585" stroke-width="2.2"/>
+  <!-- forehead curl -->
+  <path d="M144 100 Q155 93 162 101" fill="none" stroke="#f9dfe9" stroke-width="4"/>
+  <!-- neck bow -->
+  <path d="M147 216 Q119 198 116 222 Q118 242 149 230 Z" fill="#ff94bd" stroke="#d2749c"/>
+  <path d="M157 216 Q183 199 189 222 Q186 242 155 230 Z" fill="#ff94bd" stroke="#d2749c"/>
+  <circle cx="152" cy="224" r="9" fill="#ffe7f0" stroke="#d2749c" stroke-width="2"/>
+  <!-- envelope -->
+  <g transform="rotate(-7 152 254)">
+    <rect x="115" y="235" width="77" height="47" rx="8" fill="#fffafc" stroke="#dc9cb4"/>
+    <path d="M118 240 L153 262 L189 240" fill="none" stroke="#dc9cb4" stroke-width="2.5"/>
+    <path d="M150 255 C143 249 139 254 143 259 L153 267 L163 259 C167 253 160 249 155 255 L153 257 Z" fill="#f28daf" stroke="none"/>
+  </g>
+  <!-- paws over letter -->
+  <ellipse cx="110" cy="247" rx="15" ry="11" transform="rotate(-22 110 247)" fill="url(#fur)"/>
+  <ellipse cx="197" cy="248" rx="15" ry="11" transform="rotate(22 197 248)" fill="url(#fur)"/>
+</g>
+<g fill="#fff" opacity=".9"><circle cx="44" cy="102" r="4"/><circle cx="253" cy="114" r="3"/></g>
+</svg>
